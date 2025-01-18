@@ -3,15 +3,37 @@
 import Navbar from './components/Navbar'
 import Header from './components/Header'
 import About from './components/About'
-import Services from './components/Services'
-import Work from './components/Work'
+// import Services from './components/Services'
+import Achievements from './components/Achievements'
+import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import { useState, useEffect } from 'react';
+import Loader from './components/Loader';
+
+import { useRouter } from 'next/navigation';
+
 
 export default function Home() {
 
+  const router = useRouter();
+
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  const handleShowMore = () => {
+    router.push('/projects');
+  };
+  const achievements = () => {
+    router.push('/achievements');
+  }
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 700);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(()=>{
     if(localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)){
@@ -33,13 +55,20 @@ export default function Home() {
 
     return ( 
       <>
-      <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
-      <Header isDarkMode={isDarkMode}/>
-      <About isDarkMode={isDarkMode}/>
-      <Services isDarkMode={isDarkMode}/>
-      <Work isDarkMode={isDarkMode}/>
-      <Contact isDarkMode={isDarkMode}/>
-      <Footer isDarkMode={isDarkMode}/>
+      {loading ? (
+        <Loader isDarkMode={isDarkMode}/>
+      ) : (
+        <main>
+          <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
+          <Header isDarkMode={isDarkMode}/>
+          <About isDarkMode={isDarkMode}/>
+          {/* <Services isDarkMode={isDarkMode}/> */}
+          <Projects isDarkMode={isDarkMode} onShowMore={handleShowMore}/>
+          <Achievements isDarkMode={isDarkMode}/> 
+          <Contact isDarkMode={isDarkMode}/>
+          <Footer isDarkMode={isDarkMode}/>
+        </main>
+      )}
       </>
     );
 }

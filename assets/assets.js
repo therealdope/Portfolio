@@ -27,16 +27,26 @@ import menu_black from './menu-black.png';
 import menu_white from './menu-white.png';
 import close_black from './close-black.png';
 import close_white from './close-white.png';
-import web_icon from './web-icon.png';
-import mobile_icon from './mobile-icon.png';
-import ui_icon from './ui-icon.png';
-import graphics_icon from './graphics-icon.png';
 import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import back from './back.png';
+import back_white from './back_white.png';
+import github from './github.png';
+import linkedin from './linkedin.png'
+import sih from './sih.webp'
+import google from './google.png'
+import flipkart from './flipkart.png'
 
 export const assets = {
+    google,
+    flipkart,
+    sih,
+    github,
+    linkedin,
+    back,
+    back_white,
     user_image,
     code_icon,
     code_icon_dark,
@@ -66,50 +76,58 @@ export const assets = {
     menu_white,
     close_black,
     close_white,
-    web_icon,
-    mobile_icon,
-    ui_icon,
-    graphics_icon,
     right_arrow,
     send_icon,
     right_arrow_bold,
     right_arrow_bold_dark
 };
 
-export const workData = [
-    {
-        title: 'Frontend project',
-        description: 'Web Design',
-        bgImage: '/work-1.png',
+export const workData = [{
+        title: 'McD clone',
+        description: 'Frontend Design',
+        bgImage: '/work-1.jpeg',
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
-        bgImage: '/work-2.png',
+        title: 'Weather Website',
+        description: 'React Js',
+        bgImage: '/work-2.avif',
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
+        title: 'Credit Card Fraud Detection',
+        description: 'Flask | ML',
+        bgImage: '/work-3.avif',
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
-        bgImage: '/work-4.png',
+        title: 'Ice-Wale Website',
+        description: 'Django',
+        bgImage: '/work-4.webp',
     },
 ]
 
-export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+export const achievementData = [{
+        icon: assets.google,
+        title: 'Google AI Essential',
+        description: 'Earned the Google AI Essentials Certificate, demonstrating a solid foundation in artificial intelligence concepts,tools, and applications.',
+        link: ''
+    },
+    {
+        icon: assets.sih,
+        title: 'Smart India Hackathon',
+        description: 'Actively participated in the Smart India Hackathon, collaborating with a team to develop innovative solutions for real-world problems.',
+        link: ''
+    },
+    {
+        icon: assets.flipkart,
+        title: 'Filpkart GRid 6.0',
+        description: 'Participated in Flipkart Grid 6.0, showcasing skills in competitive problem-solving and innovative solution devel-opment.',
+        link: 'https://www.chess.com'
+    },
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'CPP, Python, HTML, CSS, JavaScript, React Js, Express Js, MongoDB, SQL' },
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science Engineering' },
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Framework', description: 'Next Js, Django, Flask, Tailwind, Bootstrap' }
 ];
 
 export const toolsData = [
