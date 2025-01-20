@@ -1,4 +1,4 @@
-import { Outfit, Ovo } from "next/font/google";
+import { Outfit,Ovo} from "next/font/google";
 import "./globals.css";
 
 // Define fonts first
@@ -8,9 +8,10 @@ const outfit = Outfit({
 });
 
 const ovo = Ovo({
-  subsets: ["latin"], // Ovo only supports a single weight (400)
+  subsets: ["latin"],
   weight: "400",
 });
+
 
 export const metadata = {
   title: "Portfolio - Shwet Kheni",
@@ -20,6 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
+    <link rel="icon" href="/favicon.png" />
       <body
         className={`${outfit.className} ${ovo.className} 
       antialiased leading-8 overflow-x-hidden dark:bg-darkTheme 

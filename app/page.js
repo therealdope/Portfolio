@@ -3,13 +3,13 @@
 import Navbar from './components/Navbar'
 import Header from './components/Header'
 import About from './components/About'
-// import Services from './components/Services'
 import Achievements from './components/Achievements'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import { useState, useEffect } from 'react';
 import Loader from './components/Loader';
+import ScrollProgressBar from './components/ScrollProgressBar'
 
 import { useRouter } from 'next/navigation';
 
@@ -59,10 +59,10 @@ export default function Home() {
         <Loader isDarkMode={isDarkMode}/>
       ) : (
         <main>
+          <ScrollProgressBar />
           <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
           <Header isDarkMode={isDarkMode}/>
           <About isDarkMode={isDarkMode}/>
-          {/* <Services isDarkMode={isDarkMode}/> */}
           <Projects isDarkMode={isDarkMode} onShowMore={handleShowMore}/>
           <Achievements isDarkMode={isDarkMode}/> 
           <Contact isDarkMode={isDarkMode}/>

@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image'
 import { assets , achievementData } from '@/assets/assets'
+import {motion} from 'motion/react'
 
 
 const Projects = () => {
@@ -33,10 +34,14 @@ useEffect(() => {
 // }, []);
   return (
     <>
-    <div className="w-full px-[12%] py-10">
+    <motion.div
+    initial={{opacity: 0}}
+    whileInView={{opacity: 1}}
+    transition={{duration: 0.6, delay:0.3}}
+    className="w-full px-[12%] py-10">
       <div className="dark:text-white flex justify-between items-center mb-6">
         <Link href="/" passHref>
-          <button className="flex items-center border p-2 rounded-md ">
+          <button className="flex items-center border p-2 rounded-md hover:-translate-x-1 transition-all duration-300">
             <Image
               src={isDarkMode ? assets.back_white : assets.back}
               alt="Go back"
@@ -46,7 +51,7 @@ useEffect(() => {
           </button>
         
         </Link>
-        <button className='border p-2 rounded-md' onClick={()=>setIsDarkMode(prev => !prev)}>
+        <button className='border p-2 rounded-md dark:bg-white' onClick={()=>setIsDarkMode(prev => !prev)}>
         <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt='' className='w-6' />
         
         </button>
@@ -85,7 +90,7 @@ useEffect(() => {
       </div>
 
       
-    </div>
+    </motion.div>
     </>
     
   );

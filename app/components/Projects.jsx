@@ -8,16 +8,28 @@ const Work = ({isDarkMode, onShowMore}) => {
   return (
     <div 
     className='w-full px-[12%] py-10 scroll-mt-20' id='projects'>
-        <h4 
-        className='text-center mb-2 text-lg font-Ovo border-b'>My Work</h4>
-        <h2 
-        className='text-center text-5xl font-Ovo'>Projects</h2>
+        <motion.h4 
+        initial={{opacity: 0}}
+        whileInView={{opacity: 1}}
+        transition={{duration: 0.6, delay:0.1}}
+        className='text-center mb-2 text-lg font-Ovo border-b'>My Work</motion.h4>
+        <motion.h2
+        initial={{opacity: 0}}
+        whileInView={{opacity: 1}}
+        transition={{duration: 0.6, delay:0.1}} 
+        className='text-center text-5xl font-Ovo'>Projects</motion.h2>
     
-        <p 
+        <motion.p
+        initial={{opacity: 0}}
+        whileInView={{opacity: 1}}
+        transition={{duration: 0.6, delay:0.1}} 
         className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'
-        >"Here are some of the projects I've worked on, showcasing my skills with deep understanding."</p>
+        >"Here are some of the projects I've worked on, showcasing my skills with deep understanding."</motion.p>
 
-        <div 
+        <motion.div 
+        initial={{opacity: 0}}
+        whileInView={{opacity: 1}}
+        transition={{duration: 0.6, delay:0.1}}
         className="grid grid-cols-auto my-10 gap-5 dark:text-black">
             {workData.map((project, index)=>(
             <div
@@ -30,16 +42,16 @@ const Work = ({isDarkMode, onShowMore}) => {
                         <h2 className='font-semibold'>{project.title}</h2>
                         <p className='text-sm text-gray-700'>{project.description}</p>
                     </div>
-                    <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-blue-200 transition">
-                        <Image src={assets.send_icon} alt='send icon' className='' />
+                    <div className="border rounded-md border-black w-8 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] transition">
+                        <Image src={project.icon} alt='send icon' className='' />
                     </div>
                 </div>
             </div>
             ))}
-        </div>
+        </motion.div>
 
         <Link href = "/projects" passHref
-        className='w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover'
+        className='w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-lg py-2 px-8 mx-auto my-20 hover:translate-x-1 duration-300 dark:text-white dark:border-white dark:hover:bg-darkHover'
         onClick={onShowMore}>
         <abbr title='Go to Github to see my projects'>Show More</abbr>
         

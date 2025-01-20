@@ -8,9 +8,9 @@ export default {
     theme: {
         extend: {
             colors: {
-                lightHover: 'rgb(243,243,243)',
-                darkHover: '#000',
-                darkTheme: '#111',
+                lightHover: '#F5F5F5',
+                darkHover: '#282828',
+                darkTheme: '#121212',
             },
             fontFamily: {
                 Outfit: ['Outfit', 'sans-serif'],

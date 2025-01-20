@@ -28,7 +28,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
 
   return (
     <>
-      <div className="fixed top-32 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
+      <div className="fixed top-18 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
         <Image src={assets.header_bg_color} alt='' className='w-full' />
       </div>
 
@@ -37,25 +37,24 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
             <Image src={isDarkMode ? assets.logo_dark : assets.logo} alt="logo" className='w-28 cursor-pointer mr-14' />
         </a>
 
-        <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent"} `}>
+        <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-lg px-8 py-3 ${isScroll ? "" : "bg-white shadow-md bg-opacity-50 dark:border dark:shadow-white/10 dark:border-white/50 dark:bg-transparent"} `}>
             <li><a className='font-Ovo' href="/#top">Home</a></li>
             <li><a className='font-Ovo' href="/#about">About me</a></li>
-            {/* <li><a className='font-Ovo' href="/#services">Services</a></li> */}
             <li><a className='font-Ovo' href="/#projects">Projects</a></li>
             <li><a className='font-Ovo' href="/#achievements">Achievements</a></li>
             <li><a className='font-Ovo' href="/#contact">Contact me</a></li>
         </ul>
 
         <div className='flex item-center gap-4'>
-          <button className='border p-2 rounded-md' onClick={()=>setIsDarkMode(prev => !prev)}>
+          <button className='border p-2 rounded-md dark:bg-white' onClick={()=>setIsDarkMode(prev => !prev)}>
             <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt='' className='w-6' />
           </button>
 
           <div className="border rounded-md p-1 flex align-center justify-center dark:bg-white">
-            <a href="#" target='blank'>
+            <a href="https://github.com/therealdope" target='_blank'>
               <Image src={assets.github} alt='' className='w-10 p-1' />
             </a>
-            <a href="#" target='blank'>
+            <a href="https://linkedin.com/in/shwet-kheni-658a33252" target='_blank'>
               <Image src={assets.linkedin} alt='' className='w-10 p-1' />
             </a>
           </div>
@@ -76,7 +75,6 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
 
           <li><a className='font-Ovo' onClick={closeMenu} href="#top">Home</a></li>
           <li><a className='font-Ovo' onClick={closeMenu} href="#about">About me</a></li>
-          {/* <li><a className='font-Ovo' onClick={closeMenu} href="#services">Services</a></li> */}
           <li><a className='font-Ovo' onClick={closeMenu} href="#projects">Projects</a></li>
           <li><a className='font-Ovo' onClick={closeMenu} href="#achievements">Achievements</a></li>
           <li><a className='font-Ovo' onClick={closeMenu} href="#contact">Contact me</a></li>

@@ -28,7 +28,6 @@ import menu_white from './menu-white.png';
 import close_black from './close-black.png';
 import close_white from './close-white.png';
 import right_arrow from './right-arrow.png';
-import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 import back from './back.png';
@@ -38,8 +37,16 @@ import linkedin from './linkedin.png'
 import sih from './sih.webp'
 import google from './google.png'
 import flipkart from './flipkart.png'
+import django from './django.png'
+import webdesign from './webdesign.png'
+import reacts from './reacts.png'
+import ml from './ml.png'
 
 export const assets = {
+    django,
+    webdesign,
+    reacts,
+    ml,
     google,
     flipkart,
     sih,
@@ -77,7 +84,6 @@ export const assets = {
     close_black,
     close_white,
     right_arrow,
-    send_icon,
     right_arrow_bold,
     right_arrow_bold_dark
 };
@@ -86,21 +92,25 @@ export const workData = [{
         title: 'McD clone',
         description: 'Frontend Design',
         bgImage: '/work-1.jpeg',
+        icon: assets.webdesign,
     },
     {
         title: 'Weather Website',
         description: 'React Js',
         bgImage: '/work-2.avif',
+        icon: assets.reacts,
     },
     {
-        title: 'Credit Card Fraud Detection',
+        title: 'CCFD website',
         description: 'Flask | ML',
         bgImage: '/work-3.avif',
+        icon: assets.ml,
     },
     {
         title: 'Ice-Wale Website',
         description: 'Django',
-        bgImage: '/work-4.webp',
+        bgImage: '/work-4.jpg.webp',
+        icon: assets.django,
     },
 ]
 
@@ -108,19 +118,19 @@ export const achievementData = [{
         icon: assets.google,
         title: 'Google AI Essential',
         description: 'Earned the Google AI Essentials Certificate, demonstrating a solid foundation in artificial intelligence concepts,tools, and applications.',
-        link: ''
+        link: 'https://drive.google.com/file/d/1G4IPZs3q7xWWAJ6tNTXRGLLP9SaypLh_/view?usp=sharing'
     },
     {
         icon: assets.sih,
         title: 'Smart India Hackathon',
         description: 'Actively participated in the Smart India Hackathon, collaborating with a team to develop innovative solutions for real-world problems.',
-        link: ''
+        link: 'https://drive.google.com/file/d/1O5E5bj1vsOf34zcNCegrEChxJnZsTuVf/view?usp=sharing'
     },
     {
         icon: assets.flipkart,
         title: 'Filpkart GRid 6.0',
         description: 'Participated in Flipkart Grid 6.0, showcasing skills in competitive problem-solving and innovative solution devel-opment.',
-        link: 'https://www.chess.com'
+        link: 'https://drive.google.com/file/d/1EEve9KE_6an9KVWCWB7nZPHPaXkShtZx/view?usp=sharing'
     },
 ]
 

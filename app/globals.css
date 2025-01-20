@@ -4,3 +4,20 @@
 * {
     font-family: Outfit;
 }
+
+html::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari */
+}
+
+html {
+    overflow-y: scroll;
+    /* Allows scroll but hides scrollbar */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: url('/cursor.png') 16 16, auto;
+}
