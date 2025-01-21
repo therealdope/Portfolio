@@ -79,14 +79,9 @@ const Contact = ({isDarkMode}) => {
             className='w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg0white mb-6 dark:bg-darkHover/30 dark:border:white/90'
             name='message'></motion.textarea>
 
-            <motion.div
-            initial={{opacity: 0}}
-            whileInView={{opacity: 1}}
-            transition={{duration: 0.6, delay:0.1}}
-             className="text-red-500 mb-2 -mt-2">Submit button will directly send mail to me!</motion.div>
             <button
             className='py-3 px-6 w-max flex items-center justify-between gap-2 bg-[#121212] text-white rounded-lg mx-auto hover:translate-x-1 duration-500 dark:bg-transparent dark:border-[0.5px]' type='submit'>
-            Submit Now <Image src={assets.right_arrow_white} alt='' className='w-4' />
+            let's talk <Image src={assets.right_arrow_white} alt='' className='w-4' />
             </button>
             <p className='mt-4'>{result}</p>
         </form>

@@ -24,7 +24,7 @@ const ScrollProgressBar = () => {
         left: 0,
         width: `${scrollProgress}%`,
         height: "4px",
-        backgroundColor: "#808080",
+        backgroundColor: "#484C70",
         zIndex: 9999,
         transition: "width 0.35s ease-out",
       }}

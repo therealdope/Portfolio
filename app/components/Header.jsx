@@ -11,7 +11,7 @@ const Header = ({isDarkMode}) => {
         whileInView={{scale: 1}}
         transition={{duration: 0.8, type:'spring', stiffness: 100}}
         >
-            <Image src={assets.profile_img} alt='' className='rounded-full w-36 hover:scale-[1.05] transition-all duration-300' />
+            <Image src={assets.profile_img} alt='' className='rounded-full w-36 md:w-40 hover:scale-[1.05] transition-all duration-300' />
         </motion.div>
 
         <motion.h3 
@@ -19,8 +19,8 @@ const Header = ({isDarkMode}) => {
         whileInView={{y: 0, opacity: 1}}
         transition={{duration: 0.6, delay:0.3}}
         
-        className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo'>
-            Hi! I'm Shwet Kheni
+        className='flex items-end gap-2 text-xl md:text-3xl mb-3 font-Ovo'>
+            I'm Shwet Kheni
             <Image src={assets.hand_icon} alt='' className='w-6 hover:animate-ping'/>
         </motion.h3>
 
@@ -30,7 +30,7 @@ const Header = ({isDarkMode}) => {
         transition={{duration: 0.8, delay: 0.5}}
         className=''>
         <img
-          src={`https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=36&pause=300&color=${isDarkMode ? 'fff' : '111'}&center=true&vCenter=true&width=500&height=60&lines=I'm+Developer..;I'm+Engineer..`}
+          src={`https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=38&pause=300&color=${isDarkMode ? 'fff' : '111'}&center=true&vCenter=true&width=500&height=60&lines=I'm+Developer..;I'm+Engineer..`}
           alt="Typing SVG"
         />
         </motion.h1>
@@ -39,7 +39,7 @@ const Header = ({isDarkMode}) => {
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
         transition={{duration: 0.6, delay: 0.7}}
-        className='max-w-2xl mx-auto font-Ovo'>
+        className='max-w-2xl text-xs md:text-lg mx-auto font-Ovo'>
         "Turning ideas into reality through code, creativity, and innovation."
         </motion.p>
 
@@ -49,7 +49,7 @@ const Header = ({isDarkMode}) => {
             whileInView={{y: 0, opacity: 1}}
             transition={{duration: 0.6, delay: 1}}
             href="#contact" 
-            className='px-8 py-3 border border-white rounded-lg bg-[#121212] text-white flex items-center gap-2 dark:bg-transparent'>Contact me
+            className='px-8 py-3 rounded-lg bg-[#121212] text-white flex items-center gap-2 dark:border dark:border-white dark:bg-transparent'>Contact me
             <Image src={assets.right_arrow_white} alt='' className='w-4' />
             </motion.a></div>
             
@@ -58,8 +58,9 @@ const Header = ({isDarkMode}) => {
             initial={{y: 30, opacity: 0}}
             whileInView={{y: 0, opacity: 1}}
             transition={{duration: 0.6, delay: 1.2}}
-            href="/sample_resume.pdf" 
-            download 
+            // link for resume
+            href="https://github.com/therealdope"
+            target='_blank'
             className='px-8 py-3 border rounded-lg border-gray-500 flex items-center gap-2 bg-white dark:text-black'>My resume
             <Image src={assets.download_icon} alt='' className='w-4' />
             </motion.a>

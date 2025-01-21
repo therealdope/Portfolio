@@ -51,7 +51,7 @@ const Work = ({isDarkMode, onShowMore}) => {
         </motion.div>
 
         <Link href = "/projects" passHref
-        className='w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-lg py-2 px-8 mx-auto my-20 hover:translate-x-1 duration-300 dark:text-white dark:border-white dark:hover:bg-darkHover'
+        className='w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-lg py-2 px-8 mx-auto my-20 hover:translate-x-1 duration-300 dark:text-white dark:border-white'
         onClick={onShowMore}>
         <abbr title='Go to Github to see my projects'>Show More</abbr>
         

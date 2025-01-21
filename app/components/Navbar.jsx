@@ -32,12 +32,20 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
         <Image src={assets.header_bg_color} alt='' className='w-full' />
       </div>
 
+      <div className="hidden sm:flex md:block">
+    <div className="slider-thumb1"></div>
+    <div className="slider-thumb2"></div>
+</div>
+
+
+      
+
       <nav className={`w-full fixed px-5 lg:px-8 xl-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:bg-opacity-50 dark:shadow-white/20" : ""}`}>
         <a href="#top">
             <Image src={isDarkMode ? assets.logo_dark : assets.logo} alt="logo" className='w-28 cursor-pointer mr-14' />
         </a>
 
-        <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-lg px-8 py-3 ${isScroll ? "" : "bg-white shadow-md bg-opacity-50 dark:border dark:shadow-white/10 dark:border-white/50 dark:bg-transparent"} `}>
+        <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-lg px-8 py-3 ${isScroll ? "" : "bg-white shadow-md bg-opacity-50 dark:border dark:shadow-[#EB9FEF]/20 dark:border-white/20 dark:bg-transparent"} `}>
             <li><a className='font-Ovo' href="/#top">Home</a></li>
             <li><a className='font-Ovo' href="/#about">About me</a></li>
             <li><a className='font-Ovo' href="/#projects">Projects</a></li>
@@ -46,11 +54,11 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
         </ul>
 
         <div className='flex item-center gap-4'>
-          <button className='border p-2 rounded-md dark:bg-white' onClick={()=>setIsDarkMode(prev => !prev)}>
+          <button className='border p-2 rounded-md dark:bg-rose-50' onClick={()=>setIsDarkMode(prev => !prev)}>
             <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt='' className='w-6' />
           </button>
 
-          <div className="border rounded-md p-1 flex align-center justify-center dark:bg-white">
+          <div className="border rounded-md p-1 flex align-center justify-center dark:bg-rose-50">
             <a href="https://github.com/therealdope" target='_blank'>
               <Image src={assets.github} alt='' className='w-10 p-1' />
             </a>
