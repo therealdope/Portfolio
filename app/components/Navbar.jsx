@@ -46,11 +46,11 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
         </a>
 
         <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-lg px-8 py-3 ${isScroll ? "" : "bg-white shadow-md bg-opacity-50 dark:border dark:shadow-[#EB9FEF]/20 dark:border-white/20 dark:bg-transparent"} `}>
-            <li><a className='font-Ovo' href="/#top">Home</a></li>
-            <li><a className='font-Ovo' href="/#about">About me</a></li>
-            <li><a className='font-Ovo' href="/#projects">Projects</a></li>
-            <li><a className='font-Ovo' href="/#achievements">Achievements</a></li>
-            <li><a className='font-Ovo' href="/#contact">Contact me</a></li>
+            <a href="/#top"><li className='font-Ovo'>Home</li></a>
+            <a href="/#about"><li className='font-Ovo'>About me</li></a>
+            <a href="/#projects"><li className='font-Ovo' >Projects</li></a>
+            <a href="/#achievements"><li className='font-Ovo' >Achievements</li></a>
+            <a href="/#contact"><li className='font-Ovo'>Contact me</li></a>
         </ul>
 
         <div className='flex item-center gap-4'>
