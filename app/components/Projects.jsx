@@ -35,9 +35,9 @@ const Work = ({isDarkMode, onShowMore}) => {
             <div
                 key={index} 
                 style={{backgroundImage: `url(${project.bgImage})`}} 
-                className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"> 
+                className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative group"> 
             <a href={project.link} target='_blank'>
-                <div className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between group-hover:bottom-7 duration-500">
+                <div className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 cursor-pointer py-3 px-5 flex items-center justify-between group-hover:bottom-7 duration-500">
                     
                         <div className="">
                             <h2 className='font-semibold'>{project.title}</h2>
