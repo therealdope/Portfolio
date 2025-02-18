@@ -93,7 +93,7 @@ export const workData = [{
         description: 'Frontend Design',
         bgImage: '/work-1.jpeg',
         icon: assets.webdesign,
-        link: 'https: //therealdope.github.io/Fastfood_Website_Deploy/',
+        link: 'https://therealdope.github.io/Fastfood_Website_Deploy/',
     },
     {
         title: 'CCFD website',
