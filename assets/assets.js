@@ -41,8 +41,10 @@ import django from './django.png'
 import webdesign from './webdesign.png'
 import reacts from './reacts.png'
 import ml from './ml.png'
+import mined25 from './mined25.png'
 
 export const assets = {
+    mined25,
     django,
     webdesign,
     reacts,
@@ -129,6 +131,12 @@ export const achievementData = [{
         title: 'Smart India Hackathon',
         description: 'Actively participated in the Smart India Hackathon, collaborating with a team to develop innovative solutions for real-world problems.',
         link: 'https://drive.google.com/file/d/1O5E5bj1vsOf34zcNCegrEChxJnZsTuVf/view?usp=sharing'
+    },
+    {
+        icon: assets.mined25,
+        title: 'MINeD Hackathon',
+        description: 'Actively participated in the MINeD Hackathon, developing AI-driven solutions for mining and exploration challenges in collaboration with a skilled team.',
+        link: 'https://drive.google.com/file/d/1BluDeDy2u01A9slvAJtOQAlpAdKNC-RR/view?usp=sharing'
     },
     {
         icon: assets.flipkart,
