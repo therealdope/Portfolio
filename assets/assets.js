@@ -93,24 +93,28 @@ export const workData = [{
         description: 'Frontend Design',
         bgImage: '/work-1.jpeg',
         icon: assets.webdesign,
-    },
-    {
-        title: 'Weather Website',
-        description: 'React Js',
-        bgImage: '/work-2.avif',
-        icon: assets.reacts,
+        link: 'https: //therealdope.github.io/Fastfood_Website_Deploy/',
     },
     {
         title: 'CCFD website',
         description: 'Flask | ML',
         bgImage: '/work-3.avif',
         icon: assets.ml,
+        link: 'https://ccdf.onrender.com/',
     },
     {
         title: 'Ice-Wale Website',
         description: 'Django',
         bgImage: '/work-4.jpg.webp',
         icon: assets.django,
+        link: 'https://ice-wale.onrender.com/',
+    },
+    {
+        title: 'Weather Website',
+        description: 'React Js',
+        bgImage: '/work-2.avif',
+        icon: assets.reacts,
+        link: 'https://weather-website-omega-swart.vercel.app/',
     },
 ]
 
