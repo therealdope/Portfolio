@@ -24,7 +24,7 @@ const about = ({isDarkMode}) => {
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
         transition={{duration: 0.6, delay:0.1}} 
-        className='w-64 sm:w-80 rounded-3xl max-w-none hover:scale-[1.01] transition-all duration-300'>
+        className='w-64 sm:w-80 rounded-3xl max-w-none hover:scale-[1.01] transition-all duration-300 dark:border'>
             <Image src={assets.user_image} alt='user' className='w-full rounded-3xl'/>
         </motion.div>
 
