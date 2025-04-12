@@ -42,8 +42,24 @@ import webdesign from './webdesign.png'
 import reacts from './reacts.png'
 import ml from './ml.png'
 import mined25 from './mined25.png'
+import HackNUthon from './HackNUthon.webp'
+import awsc from './awsc.png'
+import awsf from './awsf.png'
+import awslogo from './awslogo.png'
+import traelogo from './traelogo.webp'
+import notionlogo from './notionlogo.png'
+import agent from './agent.png'
+import tm from './tm.png'
 
 export const assets = {
+    tm,
+    agent,
+    notionlogo,
+    traelogo,
+    awslogo,
+    awsc,
+    awsf,
+    HackNUthon,
     mined25,
     django,
     webdesign,
@@ -91,11 +107,25 @@ export const assets = {
 };
 
 export const workData = [{
+        title: 'Task Manager',
+        description: 'Next.js | AWS | Vercel',
+        bgImage: '/tmbg.jpg',
+        icon: assets.tm,
+        link: 'https://github.com/therealdope/Task_Management_AWS',
+    },
+    {
         title: 'McD clone',
         description: 'Frontend Design',
         bgImage: '/work-1.jpeg',
         icon: assets.webdesign,
         link: 'https://therealdope.github.io/Fastfood_Website_Deploy/',
+    },
+    {
+        title: 'Testing Agent',
+        description: 'Next | Flask | Selenium',
+        bgImage: '/ta.jpeg',
+        icon: assets.agent,
+        link: 'https://github.com/therealdope/Testing_Agent',
     },
     {
         title: 'CCFD website',
@@ -104,27 +134,45 @@ export const workData = [{
         icon: assets.ml,
         link: 'https://ccdf.onrender.com/',
     },
-    {
-        title: 'Ice-Wale Website',
-        description: 'Django',
-        bgImage: '/work-4.jpg.webp',
-        icon: assets.django,
-        link: 'https://ice-wale.onrender.com/',
-    },
-    {
-        title: 'Weather Website',
-        description: 'React Js',
-        bgImage: '/work-2.avif',
-        icon: assets.reacts,
-        link: 'https://weather-website-omega-swart.vercel.app/',
-    },
+    // {
+    //     title: 'Ice-Wale Website',
+    //     description: 'Django',
+    //     bgImage: '/work-4.jpg.webp',
+    //     icon: assets.django,
+    //     link: 'https://ice-wale.onrender.com/',
+    // },
+    // {
+    //     title: 'Weather Website',
+    //     description: 'React Js',
+    //     bgImage: '/work-2.avif',
+    //     icon: assets.reacts,
+    //     link: 'https://weather-website-omega-swart.vercel.app/',
+    // },
 ]
 
 export const achievementData = [{
+        icon: assets.awsc,
+        title: 'AWS Academy Cloud Developing',
+        description: 'Earned the AWS Academy Cloud Developing Certificate, demonstrating a solid foundation in cloud computing concepts, tools, and applications.',
+        link: 'https://drive.google.com/file/d/1O5E5bj1vsOf34zcNCegrEChxJnZsTuVf/view?usp=sharing'
+    },
+    {
         icon: assets.google,
         title: 'Google AI Essential',
         description: 'Earned the Google AI Essentials Certificate, demonstrating a solid foundation in artificial intelligence concepts,tools, and applications.',
         link: 'https://drive.google.com/file/d/1G4IPZs3q7xWWAJ6tNTXRGLLP9SaypLh_/view?usp=sharing'
+    },
+    {
+        icon: assets.awsf,
+        title: 'AWS Academy Cloud Foundations',
+        description: 'Earned the AWS Academy Cloud Foundations Certificate, demonstrating a solid foundation in cloud computing concepts, tools, and applications.',
+        link: 'https://drive.google.com/file/d/1O5E5bj1vsOf34zcNCegrEChxJnZsTuVf/view?usp=sharing'
+    },
+    {
+        icon: assets.HackNUthon,
+        title: 'HackNUthon 6.0',
+        description: 'Participated in HackNUthon 6.0, organized by the Computer Society of India (CSI), Nirma University. Collaborated with a team to design an innovative solution, successfully reaching the Top 10 finalists among numerous competing teams.',
+        link: 'https://drive.google.com/file/d/1DVt4fCbpmhjFr_DLQ7O-85KqMZG_nIZw/view?usp=sharing'
     },
     {
         icon: assets.sih,
@@ -144,14 +192,15 @@ export const achievementData = [{
         description: 'Participated in Flipkart Grid 6.0, showcasing skills in competitive problem-solving and innovative solution devel-opment.',
         link: 'https://drive.google.com/file/d/1EEve9KE_6an9KVWCWB7nZPHPaXkShtZx/view?usp=sharing'
     },
+
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'CPP, Python, HTML, CSS, JavaScript, React Js, Express Js, MongoDB, SQL' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science Engineering' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Framework', description: 'Next Js, Django, Flask, Tailwind, Bootstrap' }
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'CPP, Java Script, Python, mySQL, Node.js, Mongodb' },
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science Engineering, ITNU\'26' },
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Framework', description: 'Next.js, React.js, Tailwind, Django, Bootstrap, MongoDB, Node.js, Express.js, jQuery' }
 ];
-
+// AWS, Trae, Notion
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+    assets.awslogo, assets.traelogo, assets.notionlogo, assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
 ];

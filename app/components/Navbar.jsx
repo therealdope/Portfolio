@@ -62,7 +62,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
             <a href="https://github.com/therealdope" target='_blank'>
               <Image src={assets.github} alt='' className='w-10 p-1' />
             </a>
-            <a href="https://linkedin.com/in/shwet-kheni-658a33252" target='_blank'>
+            <a href="https://linkedin.com/in/shwetkheni" target='_blank'>
               <Image src={assets.linkedin} alt='' className='w-10 p-1' />
             </a>
           </div>

@@ -35,7 +35,7 @@ const Achivements = ({achivements, isDarkMode}) => {
       whileInView={{opacity: 1}}
       transition={{duration: 0.6, delay:0.1}}
        className="grid grid-rows-auto lg:grid-cols-2 my-10 gap-5 text-black dark:text-white">
-              {achievementData.slice(0,3).map((achievement, index) => (
+              {achievementData.slice(0,4).map((achievement, index) => (
               <div key={index} className="rounded-md cursor-pointer group flex justify-center">
                 <div className="grid grid-cols-1 md:grid-cols-[1fr_3fr] w-full rounded-md border py-3 px-4 gap-4 items-center">
                   <div className="flex justify-center items-center border rounded-md p-3">

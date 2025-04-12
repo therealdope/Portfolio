@@ -15,7 +15,7 @@ const Footer = ({isDarkMode}) => {
 
         <div className="w-max flex items-center gap-2 mx-auto border-b">
         <Image src={isDarkMode ? assets.mail_icon_dark : assets.mail_icon} alt='' className='w-6' />
-        22bce337@nirmauni.ac.in
+        skheni02@gmail.com
         </div>
       </div>
 
@@ -23,7 +23,7 @@ const Footer = ({isDarkMode}) => {
         <p> &copy;2025 Shwet Kheni. All Rights Reserved.</p>
         <ul className='flex items-center gap-10 justify-center mt-4 sm:px-1 sm:mt-0 underline'>
             <li><a target='_blank' href="https://github.com/therealdope">Github</a></li>
-            <li><a target='_blank' href="https://linkedin.com/in/shwet-kheni-658a33252">LinkedIn</a></li>
+            <li><a target='_blank' href="https://linkedin.com/in/shwetkheni">LinkedIn</a></li>
             <li><a target='_blank' href="https://discord.com/users/bubbly_beetle_82363">Discord</a></li>
             <li><a target='_blank' href="https://instagram.com/shwet_kheni">Instagram</a></li>
         </ul>
