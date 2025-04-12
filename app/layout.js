@@ -15,7 +15,13 @@ const ovo = Ovo({
 
 export const metadata = {
   title: "Portfolio - Shwet Kheni",
-  description: "",
+  description: "Personal portfolio of Shwet Kheni - A passionate computer science student and web developer showcasing projects and achievements.",
+  keywords: "web development, portfolio, computer science, Shwet Kheni",
+  openGraph: {
+    title: "Portfolio - Shwet Kheni",
+    description: "Personal portfolio of Shwet Kheni - A passionate computer science student and web developer.",
+    images: ['/og-image.png'],
+  },
 };
 
 export default function RootLayout({ children }) {
