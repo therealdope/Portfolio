@@ -50,8 +50,10 @@ import traelogo from './traelogo.webp'
 import notionlogo from './notionlogo.png'
 import agent from './agent.png'
 import tm from './tm.png'
+import bag from './bag.png'
 
 export const assets = {
+    bag,
     tm,
     agent,
     notionlogo,
@@ -107,8 +109,15 @@ export const assets = {
 };
 
 export const workData = [{
+        title: 'Ecom',
+        description: 'Next | Prisma',
+        bgImage: '/ecom.png',
+        icon: assets.bag,
+        link: 'https://github.com/therealdope/ecom',
+    },
+    {
         title: 'Task Manager',
-        description: 'Next.js | AWS | Vercel',
+        description: 'Next | AWS | Vercel',
         bgImage: '/tmbg.jpg',
         icon: assets.tm,
         link: 'https://github.com/therealdope/Task_Management_AWS',
@@ -127,13 +136,14 @@ export const workData = [{
         icon: assets.agent,
         link: 'https://github.com/therealdope/Testing_Agent',
     },
-    {
-        title: 'CCFD website',
-        description: 'Flask | ML',
-        bgImage: '/work-3.avif',
-        icon: assets.ml,
-        link: 'https://ccdf.onrender.com/',
-    },
+
+    // {
+    //     title: 'CCFD website',
+    //     description: 'Flask | ML',
+    //     bgImage: '/work-3.avif',
+    //     icon: assets.ml,
+    //     link: 'https://ccdf.onrender.com/',
+    // },
     // {
     //     title: 'Ice-Wale Website',
     //     description: 'Django',
