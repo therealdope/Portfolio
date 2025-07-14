@@ -21,7 +21,8 @@ const Header = ({isDarkMode}) => {
         
         className='flex items-end gap-2 text-xl md:text-3xl mb-3 font-Ovo'>
             I'm Shwet Kheni
-            <Image src={assets.hand_icon} alt='' className='w-6 hover:animate-ping'/>
+            <Image src={assets.hand_icon} alt='' className='w-6 hover:animate-ping mb-1'/>
+
         </motion.h3>
 
         <motion.h1 
