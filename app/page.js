@@ -14,7 +14,6 @@ import ScrollProgressBar from './components/ScrollProgressBar'
 import { useRouter } from 'next/navigation';
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
-
 export default function Home() {
 
   const router = useRouter();

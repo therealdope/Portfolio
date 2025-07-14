@@ -1,5 +1,6 @@
 import { Outfit,Ovo} from "next/font/google";
 import "./globals.css";
+import Chatbot from "./components/Chatbot";
 
 // Define fonts first
 const outfit = Outfit({
@@ -34,6 +35,8 @@ export default function RootLayout({ children }) {
       dark:text-white`}
       >
         {children}
+        <Chatbot/>
+
       </body>
     </html>
   );
