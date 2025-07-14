@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image'
 import { assets , achievementData } from '@/assets/assets'
 import {motion} from 'motion/react'
-
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
 const Projects = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -34,6 +34,7 @@ useEffect(() => {
 // }, []);
   return (
     <>
+    <SmoothCursor />
     <motion.div
     initial={{opacity: 0}}
     whileInView={{opacity: 1}}

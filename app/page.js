@@ -12,6 +12,7 @@ import Loader from './components/Loader';
 import ScrollProgressBar from './components/ScrollProgressBar'
 
 import { useRouter } from 'next/navigation';
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
 
 export default function Home() {
@@ -59,6 +60,7 @@ export default function Home() {
         <Loader isDarkMode={isDarkMode}/>
       ) : (
         <main>
+          <SmoothCursor />
           <ScrollProgressBar />
           <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
           <Header isDarkMode={isDarkMode}/>
