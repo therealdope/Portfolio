@@ -46,7 +46,7 @@ const Header = ({isDarkMode}) => {
         whileInView={{y: 0, opacity: 1}}
         transition={{duration: 0.6, delay:0.3}}
       
-        className='flex items-end gap-2 px-4 text-3xl md:text-4xl mb-5 -mt-4 font-bold font-mono rounded-full border-r-2 backdrop-blur-sm border-gray-700 dark:border-gray-100'>
+        className='flex items-end gap-2 px-4 text-3xl md:text-4xl mb-5 -mt-4 font-bold font-mono rounded-full backdrop-blur-sm'>
             <DecryptedText
   text="Shwet Kheni"
   animateOn="view"
