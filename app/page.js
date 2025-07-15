@@ -59,8 +59,8 @@ export default function Home() {
         <Loader isDarkMode={isDarkMode}/>
       ) : (
         <main>
-          <SmoothCursor />
-          <ScrollProgressBar />
+          <ScrollProgressBar /> 
+          <div className="hidden md:block"><SmoothCursor /></div>
           <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
           <Header isDarkMode={isDarkMode}/>
           <About isDarkMode={isDarkMode}/>

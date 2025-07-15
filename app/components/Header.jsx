@@ -7,7 +7,7 @@ import RotatingText from '../blocks/TextAnimations/RotatingText/RotatingText'
 import GradientText from '../blocks/TextAnimations/GradientText/GradientText'
 import Orb from '../blocks/Backgrounds/Orb/Orb'
 
-const Header = () => {
+const Header = ({isDarkMode}) => {
   return (
     <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'>
         <motion.div
@@ -32,7 +32,7 @@ const Header = () => {
       <Image
         src={assets.profile_img}
         alt=""
-        className="rounded-full w-36 md:w-48 object-contain hover:scale-[1.05] transition-all duration-300"
+        className="rounded-full w-40 md:w-48 object-contain hover:scale-[1.05] transition-all duration-300"
       />
     </div>
   </div>
@@ -46,18 +46,18 @@ const Header = () => {
         whileInView={{y: 0, opacity: 1}}
         transition={{duration: 0.6, delay:0.3}}
       
-        className='flex items-end gap-2 px-4 text-xl md:text-3xl mb-5 -mt-4 font-Ovo backdrop-blur-lg rounded-full border-r-[2px] border-l-[2px] border-gray-700 dark:border-gray-100'>
+        className='flex items-end gap-2 px-4 text-3xl md:text-4xl mb-5 -mt-4 font-bold font-mono rounded-full border-r-2 backdrop-blur-sm border-gray-700 dark:border-gray-100'>
             <DecryptedText
   text="Shwet Kheni"
   animateOn="view"
   revealDirection="start"
   maxIterations={20}
   speed={70}
-
+  delay={1.5}
   sequential={true}
 />
 
-            <Image src={assets.hand_icon} alt='' className='w-6 hover:animate-ping mb-1'/>
+            <Image src={assets.hand_icon} alt='' className='w-7 hover:animate-ping mb-1'/>
 
         </motion.div>
 
@@ -78,7 +78,7 @@ const Header = () => {
   texts={['Engineer', 'Developer', 'Designer']}
   mainClassName={`ml-1 font-semibold backdrop-blur-md border border-black dark:border-white text-5xl px-2 sm:px-2 md:px-3 overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg`}
   splitLetterClassName="text-transparent bg-clip-text bg-gradient-to-r
-    from-gray-400 via-gray-600 to-gray-900
+    from-gray-500 via-gray-700 to-gray-900
     dark:from-gray-100 dark:via-gray-300 dark:to-gray-600"
   staggerFrom={"last"}
   initial={{ y: "100%" }}
