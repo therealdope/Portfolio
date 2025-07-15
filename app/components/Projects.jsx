@@ -3,6 +3,7 @@ import { assets ,workData } from '@/assets/assets'
 import Image from 'next/image'
 import {motion} from 'motion/react'
 import Link from 'next/link';
+import GradientText from '../blocks/TextAnimations/GradientText/GradientText';
 
 const Work = ({isDarkMode, onShowMore}) => {
   return (
@@ -12,7 +13,16 @@ const Work = ({isDarkMode, onShowMore}) => {
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
         transition={{duration: 0.6, delay:0.1}}
-        className='text-center mb-2 text-lg font-Ovo border-b'>My Work</motion.h4>
+        className='text-center mb-2 text-lg font-Ovo border-b'>
+            <GradientText
+  colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+  animationSpeed={3}
+  showBorder={false}
+  className="custom-class"
+>
+  My Work
+</GradientText>
+        </motion.h4>
         <motion.h2
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}

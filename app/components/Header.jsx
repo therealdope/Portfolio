@@ -2,47 +2,119 @@ import React from 'react'
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
 import { motion } from 'motion/react'
+import DecryptedText from '../blocks/TextAnimations/DecryptedText/DecryptedText'
+import RotatingText from '../blocks/TextAnimations/RotatingText/RotatingText'
+import GradientText from '../blocks/TextAnimations/GradientText/GradientText'
+import Orb from '../blocks/Backgrounds/Orb/Orb'
 
-const Header = ({isDarkMode}) => {
+const Header = () => {
   return (
     <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'>
         <motion.div
-        initial={{scale: 0}}
-        whileInView={{scale: 1}}
-        transition={{duration: 0.8, type:'spring', stiffness: 100}}
-        >
-            <Image src={assets.profile_img} alt='' className='rounded-full w-36 md:w-40 hover:scale-[1.05] transition-all duration-300' />
-        </motion.div>
+  initial={{ scale: 0 }}
+  whileInView={{ scale: 1 }}
+  transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
+  className="relative flex items-center justify-center"
+>
+  <div className="relative w-52 h-52 md:w-60 md:h-60">
+    {/* Orb on top */}
+    <div className="absolute inset-0 z-10 flex items-center justify-center">
+      <Orb
+        hoverIntensity={0.3}
+        rotateOnHover={true}
+        hue={0}
+        forceHoverState={false}
+      />
+    </div>
 
-        <motion.h3 
+    {/* Image below */}
+    <div className="absolute inset-0 z-0 flex items-center justify-center">
+      <Image
+        src={assets.profile_img}
+        alt=""
+        className="rounded-full w-36 md:w-48 object-contain hover:scale-[1.05] transition-all duration-300"
+      />
+    </div>
+  </div>
+</motion.div>
+
+
+
+
+        <motion.div 
         initial={{y: -20, opacity: 0}}
         whileInView={{y: 0, opacity: 1}}
         transition={{duration: 0.6, delay:0.3}}
-        
-        className='flex items-end gap-2 text-xl md:text-3xl mb-3 font-Ovo'>
-            I'm Shwet Kheni
+      
+        className='flex items-end gap-2 px-4 text-xl md:text-3xl mb-5 -mt-4 font-Ovo backdrop-blur-lg rounded-full border-r-[2px] border-l-[2px] border-gray-700 dark:border-gray-100'>
+            <DecryptedText
+  text="Shwet Kheni"
+  animateOn="view"
+  revealDirection="start"
+  maxIterations={20}
+  speed={70}
+
+  sequential={true}
+/>
+
             <Image src={assets.hand_icon} alt='' className='w-6 hover:animate-ping mb-1'/>
 
-        </motion.h3>
+        </motion.div>
 
         <motion.h1 
         initial={{y: -30, opacity: 0}}
         whileInView={{y:0, opacity: 1}}
         transition={{duration: 0.8, delay: 0.5}}
         className=''>
-        <img
+        {/* <img
           src={`https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=38&pause=300&color=${isDarkMode ? 'fff' : '111'}&center=true&vCenter=true&width=500&height=60&lines=I'm+Developer..;I'm+Engineer..`}
           alt="Typing SVG"
-        />
+        /> */}
+        <div className="flex justify-center">
+          <div className="-mr-2 font-semibold text-gray-800 dark:text-gray-200 text-5xl px-2 sm:px-2 md:px-3 overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg">
+            I am
+          </div>
+<RotatingText
+  texts={['Engineer', 'Developer', 'Designer']}
+  mainClassName={`ml-1 font-semibold backdrop-blur-md border border-black dark:border-white text-5xl px-2 sm:px-2 md:px-3 overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg`}
+  splitLetterClassName="text-transparent bg-clip-text bg-gradient-to-r
+    from-gray-400 via-gray-600 to-gray-900
+    dark:from-gray-100 dark:via-gray-300 dark:to-gray-600"
+  staggerFrom={"last"}
+  initial={{ y: "100%" }}
+  animate={{ y: 0 }}
+  exit={{ y: "-120%" }}
+  staggerDuration={0.025}
+  splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+  transition={{ type: "spring", damping: 30, stiffness: 400 }}
+  rotationInterval={4000}
+/>
+
+
+        </div>
+
         </motion.h1>
         
         <motion.p 
-        initial={{opacity: 0}}
-        whileInView={{opacity: 1}}
-        transition={{duration: 0.6, delay: 0.7}}
-        className='max-w-2xl text-xs md:text-lg mx-auto font-Ovo'>
-        "Turning ideas into reality through code, creativity, and innovation."
-        </motion.p>
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ duration: 0.6, delay: 0.7 }}
+  className="max-w-2xl mx-auto mt-2 text-center text-sm md:text-lg px-4 md:flex"
+>
+  "Turning ideas into reality through code,{" "}
+  <div className="flex justify-center">
+  <GradientText
+    colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+    animationSpeed={3}
+    showBorder={false}
+    className="px-0.5"
+  >
+    Creativity
+  </GradientText>
+  and innovation."
+  </div>
+</motion.p>
+
 
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
           <div className="hover:translate-x-1 transition-all duration-300"><motion.a 

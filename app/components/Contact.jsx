@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import { assets } from '@/assets/assets'
 import {motion} from 'motion/react'
+import GradientText from '../blocks/TextAnimations/GradientText/GradientText';
 
 const Contact = ({isDarkMode}) => {
 
@@ -40,7 +41,15 @@ const Contact = ({isDarkMode}) => {
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
         transition={{duration: 0.6, delay:0.1}} 
-        className='text-center mb-2 text-lg font-Ovo border-b'>Connect with me</motion.h4>
+        className='text-center mb-2 text-lg font-Ovo border-b'>
+        <GradientText
+  colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+  animationSpeed={3}
+  showBorder={false}
+  className="custom-class"
+>
+  Connect with me
+</GradientText></motion.h4>
         
         <motion.h2 
         initial={{opacity: 0}}

@@ -2,6 +2,8 @@ import React from 'react'
 import { assets, infoList, toolsData } from '@/assets/assets'
 import Image from 'next/image'
 import {motion} from 'motion/react'
+import GradientText from '../blocks/TextAnimations/GradientText/GradientText'
+import GlareHover from '../blocks/Animations/GlareHover/GlareHover'
 
 const about = ({isDarkMode}) => {
   return (
@@ -11,7 +13,19 @@ const about = ({isDarkMode}) => {
         whileInView={{opacity: 1}}
         transition={{duration: 0.6, delay: 0.1}}
         className='text-center mb-2 text-base sm:text-lg font-Ovo border-b'>
-        Introduction
+        
+
+<GradientText
+  colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+  animationSpeed={3}
+  showBorder={false}
+  className="custom-class"
+>
+  Introduction
+</GradientText>
+        <div className="">
+
+        </div>
       </motion.h4>
       <motion.h2
         initial={{opacity: 0}}
@@ -20,6 +34,7 @@ const about = ({isDarkMode}) => {
         className='text-center text-3xl sm:text-4xl md:text-5xl font-Ovo'>
         About me
       </motion.h2>
+
     
       <div className="flex w-full flex-col lg:flex-row items-center gap-10 sm:gap-20 my-10 sm:my-20">
         <motion.div
@@ -27,7 +42,17 @@ const about = ({isDarkMode}) => {
           whileInView={{opacity: 1}}
           transition={{duration: 0.6, delay:0.1}} 
           className='w-48 sm:w-64 md:w-80 rounded-3xl max-w-none hover:scale-[1.01] transition-all duration-300 dark:border'>
-          <Image src={assets.user_image} alt='user' className='w-full rounded-3xl'/>
+            <GlareHover
+lareColor="#ffffff"
+glareOpacity={0.3}
+glareAngle={-30}
+glareSize={300}
+transitionDuration={800}
+playOnce={false}
+> 
+<Image src={assets.user_image} alt='user' className='w-full object-contain rounded-2xl max-h-[650px]'/>
+          
+        </GlareHover>
         </motion.div>
     
         <div className="flex-1 w-full lg:w-auto">
