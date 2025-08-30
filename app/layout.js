@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
       dark:text-white`}
       >
         {children}
-        <Chatbot/>
+        {/* <Chatbot/> */}
 
       </body>
     </html>
