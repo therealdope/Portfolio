@@ -132,7 +132,7 @@ const Header = ({isDarkMode}) => {
             whileInView={{y: 0, opacity: 1}}
             transition={{duration: 0.6, delay: 1.2}}
             // link for resume
-            href="https://drive.google.com/file/d/1jpbP6e3M7K_HB0bSzf35yh8udxgWiu1C/view?usp=sharing"
+            href="https://drive.google.com/file/d/1UNycusLUujUYAFbow_964S8cWg61HQ3D/view?usp=sharing"
             target='_blank'
             className='px-8 py-3 border rounded-lg border-gray-500 flex items-center gap-2 bg-white dark:text-black'>My resume
             <Image src={assets.download_icon} alt='' className='w-4' />
